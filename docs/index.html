@@ -23,9 +23,21 @@
 
    <script>
      // Docsify Configuration
-     window.$docsify = {
-       // ..
-     };
+      window.$docsify = {
+        name: 'Docs Test',
+        repo: 'https://github.com/NerdyDeedsLLC/docs-test/', // optional GitHub link
+        loadSidebar: true,           // looks for _sidebar.md
+        loadNavbar: true,            // looks for _navbar.md
+        subMaxLevel: 2,              // auto-generate h2/h3 in TOC
+        auto2top: true,
+        coverpage: false,            // set to true if you add _coverpage.md later
+        // routerMode: 'hash',       // keep hash mode; easiest on GitHub Pages
+        search: {
+          maxAge: 86400000,          // 1 day cache
+          paths: 'auto',             // or an array of paths
+          placeholder: 'Search...',
+        }
+      };
    </script>
 
    <!-- Required -->
