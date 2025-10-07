@@ -1,0 +1,26 @@
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node modules (if used for local development)
+node_modules/
+package-lock.json
+
+# Python (if used for local development)
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+tmp/
+
+# OS files
+Thumbs.db
