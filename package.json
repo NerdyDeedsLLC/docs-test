@@ -1,0 +1,30 @@
+{
+  "name": "docs-test",
+  "version": "1.0.0",
+  "description": "A multi-version, multi-product, multi-platform documentation site built with [Docsify](https://docsify.js.org/) and hosted on GitHub Pages.",
+  "homepage": "https://github.com/NerdyDeedsLLC/docs-test#readme",
+  "bugs": {
+    "url": "https://github.com/NerdyDeedsLLC/docs-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NerdyDeedsLLC/docs-test.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "docsify serve docs -p 5173 -o",
+    "preview": "docsify serve docs -p 5173",
+    "postinstall": "NPM_MOD=\"function npm_for_docs() { if [[ \\\"\\$1\\\" == \\\"preview\\\" ]]; then command npm run preview; exit 0; else npm \\\"\\$@\\\"; fi }; alias npm=npm_for_docs; alias preview='cd \\\"$(pwd)\\\" && command npm run preview'\" && echo \"$NPM_MOD\" >> \"$HOME/.bash_profile\" && eval \"$NPM_MOD\""
+  },
+  "devDependencies": {
+    "docsify": "^4.11.4",
+    "docsify-cli": "^4.4.2",
+    "sass": "^1.93.2"
+  }
+}

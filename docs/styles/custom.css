@@ -1,0 +1,708 @@
+@import url("/assets/AllRoundGothic-Medium.ttf");
+*, *::before, *::after {
+  position: relative;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+:root {
+  /* Documentation Product and Platform Icons */
+  --product-umfa: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1318 1313' class='product-image'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0%25' x2='50%25' y1='0%25' y2='86.6%25'%3E%3Cstop offset='0%25' stop-color='%23d79b3b'/%3E%3Cstop offset='47%25' stop-color='%23f3ea9f'/%3E%3Cstop offset='100%25' stop-color='%23d79b3b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M1308 120v890c0 64-45 113-109 113H120c-61 0-110-49-110-113V120C10 59 59 10 120 10h1079c64 0 109 49 109 110'/%3E%3Cpath fill='%2326006b' fill-rule='evenodd' d='M1318 110v910c0 64-45 113-110 113H110c-61 0-110-49-110-113V110C0 49 49 0 110 0h1098c65 0 110 49 110 110m-26 143h-265l-49 53c57 64 91 151 95 242h219zm0 332h-219c-4 87-34 167-87 231l37 34h269zm-612 514h528c46 0 84-34 84-79V891h-284l-45-45a426 426 0 0 1-283 132zm-653-79c0 45 41 79 83 79h532V978c-109-4-208-53-279-128l-46 41H27zm0-170h275l34-30c-49-65-83-148-87-235H27zm0-302h222q8-143 95-246l-45-49H27zM642 27H110c-42 0-83 41-83 83v105h287l56 61c72-72 170-117 272-121zM287 567a374 374 0 1 0 748 0 374 374 0 0 0-748 0m393-412c109 8 204 53 276 121l56-61h280V110c0-42-38-83-84-83H680zm174 419 45-109h79v200h-53V518l-53 124h-41l-53-124h-4v147h-49V465h83zm-231 95c-45 0-75-19-83-27l30-34c8 8 31 23 61 23q29-1 30-19c0-30-113-27-113-91 0-30 38-56 87-56 37 0 64 15 71 22l-34 31c-3-4-19-16-41-16-19 0-27 8-27 16 0 34 110 30 110 90 0 30-30 61-91 61m-268-38 106-129h-94v-37h158v34L419 627h106v38H355z'/%3E%3Cpath fill='%23fffe' fill-rule='evenodd' d='M204 904h915c70 0 126 56 126 124v130c0 69-56 124-126 124H204c-69 0-126-55-126-124v-130c0-68 57-124 126-124'/%3E%3Cpath stroke='%23fff' stroke-width='2' d='M1019 1211v-28h-1q-15 30-55 32-31 0-57-22a93 93 0 0 1-29-71c0-55 40-94 96-94 57 0 95 37 95 95v88zm-46-133c-24 0-41 18-41 44 0 25 17 43 41 43 25 0 41-18 41-43 0-26-16-44-41-44m-159-77q-26 0-26 30v27h84v48h-84v105h-54v-180c0-53 31-81 80-81 50 0 80 28 80 81h-54q1-30-26-30m-149 109q0-32-28-32-27 0-27 32v101h-54v-101q0-32-28-32-27 0-28 32v101h-54v-101c0-54 31-82 77-82q39 0 59 28h1q21-28 59-28c46 0 77 28 77 82v101h-54zm-316 105c-55 0-88-32-88-90v-92h54v92q0 40 34 40 33 0 33-40v-92h54v92c0 58-34 90-87 90'/%3E%3C/svg%3E");
+  --product-fido: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1318 1313' class='product-image'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0%25' x2='50%25' y1='0%25' y2='86.6%25'%3E%3Cstop offset='0%25' stop-color='%23d79b3b'/%3E%3Cstop offset='47%25' stop-color='%23f3ea9f'/%3E%3Cstop offset='100%25' stop-color='%23d79b3b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M1308 120v890c0 64-45 113-109 113H120c-61 0-110-49-110-113V120C10 59 59 10 120 10h1079c64 0 109 49 109 110'/%3E%3Cpath fill='%2326006b' fill-rule='evenodd' d='M1318 110v910c0 64-45 113-110 113H110c-61 0-110-49-110-113V110C0 49 49 0 110 0h1098c65 0 110 49 110 110m-26 143h-265l-49 53c57 64 91 151 95 242h219zm0 332h-219c-4 87-34 167-87 231l37 34h269zm-612 514h528c46 0 84-34 84-79V891h-284l-45-45a426 426 0 0 1-283 132zm-653-79c0 45 41 79 83 79h532V978c-109-4-208-53-279-128l-46 41H27zm0-170h275l34-30c-49-65-83-148-87-235H27zm0-302h222q8-143 95-246l-45-49H27zM642 27H110c-42 0-83 41-83 83v105h287l56 61c72-72 170-117 272-121zM287 567a374 374 0 1 0 748 0 374 374 0 0 0-748 0m393-412c109 8 204 53 276 121l56-61h280V110c0-42-38-83-84-83H680zm174 419 45-109h79v200h-53V518l-53 124h-41l-53-124h-4v147h-49V465h83zm-231 95c-45 0-75-19-83-27l30-34c8 8 31 23 61 23q29-1 30-19c0-30-113-27-113-91 0-30 38-56 87-56 37 0 64 15 71 22l-34 31c-3-4-19-16-41-16-19 0-27 8-27 16 0 34 110 30 110 90 0 30-30 61-91 61m-268-38 106-129h-94v-37h158v34L419 627h106v38H355z'/%3E%3Cpath fill='%23fffe' fill-rule='evenodd' d='M204 904h915c70 0 126 56 126 124v130c0 69-56 124-126 124H204c-69 0-126-55-126-124v-130c0-68 57-124 126-124'/%3E%3Cpath d='M332 1047q-4 0-4 4v31q1 4 4 4h29q6 0 6 6v120q-1 6 5 5h47q2-1 1-6v-120q0-5 5-5h24q5 0 4-4v-31q1-5-4-5h-25q-4 1-4-3v-18q1-22 22-25 10-2 21 1 4 1 4-3l11-36q4-6-3-6-22-6-44-3a71 71 0 0 0-62 56q-2 13-2 28v4l-1 5h-23zm339 174-13-1-11-3a71 71 0 0 1-41-42 109 109 0 0 1 3-91 71 71 0 0 1 71-42q24 1 39 19l1-4v-84q-1-7 6-6h43q5-1 5 5v240q1 6-5 5h-37q-5 0-5-4l-2-14-1-5-3 4-7 8a71 71 0 0 1-43 15Zm49-89v-17a32 32 0 0 0-9-22 33 33 0 0 0-52 8q-10 19-6 42 1 12 9 23c7 10 21 15 34 11q19-4 23-25l1-13zm152 88q-8 0-20-5-44-18-52-63-6-31 7-61a80 80 0 0 1 64-47q27-5 52 3a78 78 0 0 1 50 52 100 100 0 0 1-5 76 82 82 0 0 1-62 45s-8 1-16 1zm50-88a71 71 0 0 0-6-31q-5-13-17-18c-15-6-32 2-39 18q-8 22-5 45 2 12 8 22a30 30 0 0 0 48 4l7-12q5-13 4-28Zm-379-106c-16 0-29-13-29-29a30 30 0 0 1 29-30c16 0 29 14 29 30a30 30 0 0 1-29 29Zm29 146v-120q1-5-4-5h-75q-4 0-4 5v30q0 5 5 5h22q5 0 5 5v122q0 3 3 3h48v-5z'/%3E%3C/svg%3E");
+  --platform-android: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -150 787 780'%3E%3Cdefs%3E%3ClinearGradient id='antR' x1='0%25' x2='100%25' y1='0%25' y2='80%25'%3E%3Cstop offset='36%25' stop-color='%238C8' /%3E%3Cstop offset='68%25' stop-color='%235A5' /%3E%3C/linearGradient%3E%3ClinearGradient id='antL' x1='0%25' x2='100%25' y1='80%25' y2='0%25'%3E%3Cstop offset='32%25' stop-color='%235A5' /%3E%3Cstop offset='64%25' stop-color='%238C8' /%3E%3C/linearGradient%3E%3ClinearGradient id='and' x1='0%25' x2='0%25' y1='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%235A5' /%3E%3Cstop offset='90%25' stop-color='%239D9' /%3E%3Cstop offset='100%25' stop-color='%239B9' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23antR)' d='M572 12a29 29 0 0 0-40 10L424 204a29 29 0 1 0 50 30L582 52a29 29 0 0 0-10-40Z' /%3E%3Cpath fill='url(%23antL)' d='M117 12a29 29 0 0 1 40 10l108 182a29 29 0 1 1-50 30L107 52a29 29 0 0 1 10-40Z' /%3E%3Cpath fill='url(%23and)' d='M3 404a343 343 0 0 1 682 0H3Z' /%3E%3Cpath d='M211 254c12 12 9 34-5 50-14 15-35 18-46 6s-9-34 6-49c14-16 34-18 46-7Zm270 0c-11 12-9 34 5 50 14 15 35 18 46 6s9-34-5-49c-14-16-35-18-46-6ZM58 462 0 618h25l14-38h67l13 38h24L85 462Zm275 0v66c-9-8-18-13-28-13a53 53 0 0 0 0 106c9 0 18-3 28-14v11h23V462Zm329 0v66c-9-8-18-13-29-13-27 0-51 24-51 53s24 53 51 53c10 0 18-3 29-14v11h22V462Zm-102 9a14 14 0 0 0-15 14 14 14 0 0 0 15 14 14 14 0 0 0 14-14 14 14 0 0 0-14-14zM72 484l25 74H46Zm125 31c-25 0-45 22-45 42v61h23v-61c0-13 12-22 22-22s23 9 23 22v61h23v-61c0-20-20-42-46-42zm288 0a53 53 0 1 0 0 106c31 0 53-24 53-53s-23-53-53-53zm-70 0c-27 0-46 20-46 50v53h22v-53c0-10 2-16 8-22 8-8 15-8 30-7v-18c-1-1-6-3-14-3zm134 3v100h22V518zm-243 17c16 0 29 15 29 33s-13 33-29 33c-17 0-30-14-30-33s13-33 30-33zm328 0c16 0 29 15 29 33s-13 33-29 33c-17 0-30-14-30-33s14-33 30-33zm-149 0c18 0 30 15 30 33s-13 33-30 33c-18 0-31-15-31-33s12-33 31-33z' /%3E%3C/svg%3E");
+  --platform-ios: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-240 -120 1050 1040'%3E%3Cdefs%3E%3ClinearGradient id='b' x1='0%25' x2='0%25' y1='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%237DF' /%3E%3Cstop offset='100%25' stop-color='%2335A' /%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='0%25' x2='0%25' y1='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23FFF3' /%3E%3Cstop offset='100%25' stop-color='%23FFF5' /%3E%3C/linearGradient%3E%3ClinearGradient id='d' x1='0%25' x2='60%25' y1='0%25' y2='80%25'%3E%3Cstop offset='28%25' stop-color='%2335A' /%3E%3Cstop offset='58%25' stop-color='%237DF' /%3E%3Cstop offset='100%25' stop-color='%2335A' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23b)' stroke='%23093883' stroke-width='9' d='M280 158v-1m-74 0c25 7 55 27 89 26 25-1 41-16 50-20 24-10 106-47 195 51-147 112-26 267 17 257-17 39-23 103-117 159-49 23-89-17-135-17-51-1-107 47-160 19-16-10-132-93-139-257 0-170 73-251 200-218Z' /%3E%3Cpath fill='url(%23d)' stroke='%23093883' stroke-width='9' d='M411 4c-9 0-145 27-130 154C390 147 408 58 411 4Z' /%3E%3Cpath fill='url(%23c)' d='M276 163v-1M22 439C1 395 7 213 94 169c39-19 83-15 111-8 25 6 56 27 88 26 24-1 46-16 55-20 22-10 98-46 168 38-154 259-414 84-494 234Z' /%3E%3Cpath fill='url(%23c)' d='M409 7c-7 0-108 28-115 99 85-6 113-68 115-99Z' opacity='.5' /%3E%3Cpath d='M78 903h34V758H78Zm17-164c11 0 19-8 19-18 0-11-8-19-19-19a19 19 0 1 0 0 37zm131-37c-58 1-94 40-94 103 0 62 36 101 94 101 57 0 93-39 93-101 0-63-36-103-93-103zm0 30c35 0 57 28 57 72s-22 72-57 72c-36 0-58-28-58-72s22-72 58-72zm108 115c1 37 31 59 76 59 48 0 78-23 78-61 0-29-17-45-57-55l-23-5c-24-6-34-13-34-27 0-16 15-27 37-27 23 0 38 11 40 30h34c-1-35-30-59-73-59-43 1-74 25-74 60 0 28 18 45 54 54l25 6c25 6 35 14 35 28 0 16-16 28-40 28s-42-12-45-30h-34z' /%3E%3C/svg%3E");
+  --platform-browser: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 630 630'%3E%3Cpath fill='%23f7df1e' d='M0 29.25h283.5v283.5H0z' /%3E%3Cpath d='M190.35 250.65c5.85 9.45 13.05 16.2 26.55 16.2 10.8 0 18-5.4 18-13.05 0-9-7.2-12.6-19.35-17.55l-6.75-3.15c-19.35-8.1-31.95-18.45-31.95-40.05 0-19.8 15.3-35.1 38.7-35.1 17.1 0 29.25 5.85 38.25 21.15l-20.7 13.5c-4.95-8.1-9.9-11.25-17.55-11.25s-12.6 4.95-12.6 11.25c0 8.1 4.95 11.25 16.65 16.2l6.3 2.7c22.95 9.9 35.55 19.8 35.55 41.85 0 23.85-18.9 37.35-44.1 37.35-24.75 0-40.95-12.15-48.6-27.45zM96.3 252.9c4.05 7.65 8.1 13.95 17.1 13.95s14.4-3.6 14.4-16.65v-90.9h26.55v90.9c0 27.9-16.2 40.5-39.6 40.5-21.6 0-33.75-11.25-40.05-24.75z' /%3E%3Cpath fill='%23CB3837' d='M306 342h324v108H468v18h-72v-18h-90V342zm18 90h36v-54h18v54h18v-72h-72v72zm90-72v90h36v-18h36v-72h-72zm36 18h18v36h-18v-36zm54-18v72h36v-54h18v54h18v-54h18v54h18v-72H504z' /%3E%3Cpath fill='%23FFF' d='M324 432h36v-54h18v54h18v-72h-72zm90-72v90h36v-18h36v-72h-72zm54 54h-18v-36h18v36zm36-54v72h36v-54h18v54h18v-54h18v54h18v-72z' /%3E%3Cpath fill='%230003' transform='translate(-5,-2)' fill-rule='evenodd' d='M280.468 348.886v60.352h38.524v-60.352h60.06v-38.232h-60.06v-60.058h-38.524v60.058h-60.06v38.232h60.06Z' /%3E%3Cpath d='M573.759 579.354v38.96h-21.462v-81.51h20.34v14.208c4.52-7.465 9.413-16.913 26.996-16.003v21.836c-8.498 0-25.874.71-25.874 22.51Zm-85.255 4.187c.761 18.845 15.21 20.266 20.274 20.266 11.252 0 14.898-6.855 16.22-9.348h21.759c-.449 3.79-7.764 26.621-38.566 26.621-21.697 0-41.15-12.521-41.15-42.66 0-28.24 16.485-43.785 40.378-43.785-3.64 0 41.272-6.116 40.45 48.906h-59.365Zm18.922-31.332c-10.94 0-16.853 6.661-18.398 17.274h36.715c-.774-11.314-8.257-17.274-18.317-17.274Zm-43.531 41.428c0 16.153-11.765 27.443-36.94 27.443-25.676 0-37.615-12.04-37.615-28.79h21.61c.605 5.086 1.324 12.339 17.657 12.339 8.417 0 13.752-2.492 13.752-7.478 0-4.786.44-5.807-25.293-11.89-18.524-4.585-25.259-10.596-25.259-23.257 0-15.055 12.389-27.518 33.873-27.518 20.382 0 34.071 7.203 35.97 27.145H440.34c-.316-2.892-1.107-10.843-14.323-10.843-9.297 0-12.897 3.364-12.897 7.254 0 4.784-.067 5.634 25.402 11.216 17.08 4.013 25.374 11.99 25.374 24.38Zm-120.626 24.677-12.788-59.375-12.936 59.375h-22.136l-22.882-81.51h22.882l12.713 58.478 11.74-58.478h21.612l12.413 58.703 12.713-58.703h22.21l-23.63 81.51h-21.911Zm-112.626 2.766c-28.017 0-41.652-19.498-41.652-43.41 0-23.507 13.635-43.483 41.652-43.483s41.654 19.976 41.654 43.484c0 23.91-13.636 43.41-41.654 43.41Zm-.074-68.871c-12.463 0-19.442 9.135-19.442 25.462 0 16.33 6.98 25.537 19.442 25.537s19.368-9.207 19.368-25.537c0-16.327-6.905-25.462-19.368-25.462Zm-70.21 27.145v38.96h-21.462v-81.51h20.34v14.208c4.52-7.465 9.413-16.913 26.996-16.003v21.836c-8.498 0-25.874.71-25.874 22.51Zm-72.545 38.96H38.149V508.088h53.267c31.344.467 33.627 21.32 33.627 28.566 0 15.513-9.109 20.257-13.512 22.509 11.251 4.09 17.026 13.209 17.026 25.873 0 25.626-20.322 33.278-40.743 33.278Zm-3.703-91.082H60.134v24.303h26.79c9.571 0 16.134-3.14 16.134-12.413 0-11.267-9.474-11.89-18.947-11.89Zm3.153 42.55h-27.13v29.388h26.76c5.224 0 18.406.05 18.406-15.704 0-13.317-12.713-13.628-18.036-13.684Z' /%3E%3C/svg%3E");
+  --platform-reactnative: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 761 761'%3E%3Cg fill='none' stroke='%23087ea4' stroke-width='1.3' transform='matrix(23 0 0 23 380 300)'%3E%3Ccircle r='.7' /%3E%3Cellipse rx='10' ry='4.5' /%3E%3Cellipse rx='10' ry='4.5' transform='rotate(60)' /%3E%3Cellipse rx='10' ry='4.5' transform='rotate(120)' /%3E%3C/g%3E%3Cpath d='M761 703h-54c0-10-3 26 23 26 10 0 16-4 21-11l9 7a34 34 0 0 1-30 15c-22 0-37-16-37-38 0 0-2-44 35-44 11 0 20 4 25 11 10 13 8 34 8 34Zm-33-34c-14 0-19 13-21 23h40s1-23-19-23Zm-67 70h-9l-29-80h14l20 61 20-61h14l-29 80h-1Zm-52-93c-6 0-8-3-8-8 0-4 2-7 8-7 5 0 8 3 8 7 0 5-3 8-8 8Zm-47 73v-49h-14v-11h14v-19h14v19h15v11h-15v49c0 10 7 11 15 9v11c-14 4-29 0-29-20Zm-34 11c-6 7-14 10-22 10-27 0-27-23-27-23 0-3 0-19 21-25l28-1s3-22-17-22c-17 0-17 13-17 12h-13c0-11 12-23 31-23 29 0 30 22 30 26v37c0 11 2 18 2 18h-14l-2-9Zm0-30h-11c-13 0-24 6-24 15 0 5 2 9 6 11 16 8 27-6 29-10v-16Zm-131-44v83h-14V632h14l54 82v-82h14v107h-14l-54-83Zm-86 63v-49h-14v-11h14v-19h14v19h15v11h-15v49c0 10 7 11 15 9v11c-14 4-29 0-29-20Zm-27-32c0-1-1-18-18-18-18 0-23 13-23 32 0 21 9 28 23 28 17 0 18-15 18-15h13s-2 26-31 26c-32 0-35-26-35-39 0-17 1-43 35-43 12 0 22 5 27 14 3 4 4 9 4 15h-13Zm13 27Zm-92 16c-6 7-14 10-22 10-27 0-27-23-27-23 0-3 0-19 21-25l28-1s3-22-17-22c-17 0-17 13-17 12h-13c0-11 12-23 31-23 29 0 30 22 30 26v37c0 11 2 18 2 18h-14l-2-9Zm0-30h-11c-13 0-24 6-24 15 0 5 2 9 6 11 16 8 27-6 29-10v-16Zm-110 3c0-10-3 26 23 26 10 0 16-4 21-11l9 7a34 34 0 0 1-30 15c-22 0-37-16-37-38 0 0-2-44 35-44 11 0 20 4 25 11 10 13 8 34 8 34H95Zm21-34c-14 0-19 13-21 23h40s1-23-19-23Zm-76 26H15v44H0V632h36c4 0 37-1 37 32 0 20-17 28-20 29v-1 1l25 45v1H63l-23-44Zm19-31c0-1 1-20-23-20H15v40h21c24 0 23-20 23-20Zm556 75h-13v-80h13v80Z' /%3E%3C/svg%3E");
+  --platform-flutter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-80 0 400 400'%3E%3Cpath fill='%2344d1fd' d='M136 4h82L81 141l-36 35-40-40L136 4zm0 122 4-1 78 1-71 70-41-40 30-30z' /%3E%3Cpath fill='%231fbcfd' d='m65 196 41-40 41 40v1l-41 40-41-41z' /%3E%3Cpath fill='%2308589c' d='m106 237 41-40 71 70-80 1-4-2-28-29z' /%3E%3Cpath fill='%23666' d='M-28 306h44v9h-35v25l2 1h30v9h-32v33h-9v-77zm55 0h9v77h-9v-77zm89 6h10v16h13v8h-13v31c0 3 0 7 3 8s7 1 10-1v9c-3 2-7 2-11 1-5 0-9-4-11-9l-1-8v-31h-9v-8h9v-16zm39 0h9v1l1 15h13v8h-13l-1 32c0 2 1 6 4 7 3 2 7 1 10-1v9c-3 2-7 2-10 1-5 0-9-3-11-7l-2-7v-34h-9v-8h9v-16zm45 16c6-2 13-3 20 0 7 2 13 9 15 16l1 13h-43c0 5 1 9 5 13 4 5 12 7 19 5 4-1 8-5 10-9l8 4c-3 7-10 12-18 14-6 1-13 1-19-2-7-4-12-12-14-20-1-6-1-13 2-19 2-6 7-12 14-15m3 8c-5 3-9 8-10 14h34c-1-4-2-8-5-11-5-5-13-6-19-3zm53 1c3-9 14-13 23-10v10c-4-1-8-2-12-1-5 2-9 6-10 11l-1 11v25h-9v-55h9v9zm-207-9h9v33c0 4 1 8 4 11 3 4 9 5 14 3 7-2 11-9 11-16v-31h10l-1 55h-8v-8c-2 2-4 5-7 6-6 4-13 4-19 3-4-2-8-4-10-8s-3-9-3-14v-34z' /%3E%3C/svg%3E");
+  /* Ideem CSS Color Palette vars */
+  --purple: #64B;
+  --dark-purple: #206;
+  --light-purple: #CBD;
+  --goldenrod: #EB4;
+  --light-goldenrod: #FEA;
+  --dark-goldenrod: #C80;
+  --dark-goldenrod-text: #430;
+  --white: #FFF;
+  --gray: #DDD;
+  --light-gray: #EEE;
+  --dark-gray: #AAA;
+  --gray-text: #666;
+  --dark-gray-text: #333;
+  --black: #000;
+  --clear: #FFF0;
+}
+
+.product-umfa {
+  background-image: var(--product-umfa);
+}
+
+.product-fido {
+  background-image: var(--product-fido);
+}
+
+.platform-android {
+  background-image: var(--platform-android);
+}
+
+.platform-ios {
+  background-image: var(--platform-ios);
+}
+
+.platform-browser {
+  background-image: var(--platform-browser);
+}
+
+.platform-reactnative {
+  background-image: var(--platform-reactnative);
+}
+
+.platform-flutter {
+  background-image: var(--platform-flutter);
+}
+
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main {
+  max-width: clamp(640px, 50vw, 1600px);
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h1:first-child::before, body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h1:first-child::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: top left;
+  color: transparent;
+  font-size: 3rem;
+  line-height: 1;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h1:has(+ h2 + hr), body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr) {
+  width: 70%;
+  white-space: nowrap;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h1:has(+ h2 + hr), body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h1:has(+ h2 + hr) *, body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr), body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr) * {
+  margin: 0;
+  font-family: AllRoundGothic-Medium;
+  line-height: 1rem;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr) {
+  text-align: right;
+  color: var(--light-purple);
+  width: 30%;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr), body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr) * {
+  margin: 0;
+  font-family: unset;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr) a {
+  text-decoration: underline;
+  text-decoration-color: var(--clear);
+  transition: all 0.3s ease-in-out;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > h2:has(+ hr) a:hover {
+  color: var(--dark-purple);
+  text-decoration-color: var(--dark-purple);
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=product-]),
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=platform-]),
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=product-]),
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=platform-]),
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=product-]),
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=platform-]) {
+  min-width: calc(50% - 2em);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1em;
+  padding: 2em 1em;
+  background: var(--light-gray);
+  border-radius: 1em;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=product-]) img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=platform-]) img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=product-]) img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=platform-]) img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=product-]) img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=platform-]) img {
+  width: clamp(10em, 100%, 15em);
+  height: clamp(10em, 100%, 15em);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: grayscale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=product-]):hover,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=platform-]):hover,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=product-]):hover,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=platform-]):hover,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=product-]):hover,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=platform-]):hover {
+  background: var(--white);
+  box-shadow: inset 0 0 2rem var(--goldenrod);
+  text-decoration: none;
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=product-]):hover img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main a:has(img[class^=platform-]):hover img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=product-]):hover img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p a:has(img[class^=platform-]):hover img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=product-]):hover img,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p a:has(img[class^=platform-]):hover img {
+  filter: grayscale(0) drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.2666666667));
+}
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main hr + h2,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + p hr + h2,
+body:is([data-page$="README.md"],
+[data-page$="products/README.md"],
+[data-page$="umfa.md"],
+[data-page$="fido.md"],
+[data-page$="browser.md"],
+[data-page$="ios.md"],
+[data-page$="android.md"],
+[data-page$="react-native.md"]) #main > hr + h2 + p hr + h2 {
+  display: block;
+  min-width: 100%;
+  color: var(--dark-purple);
+}
+
+#main > ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#main > ul::before {
+  content: "Latest Version";
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  width: 50%;
+  top: 1.5em;
+  color: var(--dark-gray);
+}
+#main > ul ul, #main > ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#main > ul > li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 3em;
+}
+#main > ul > li a {
+  display: block;
+  margin: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5em;
+  font-family: AllRoundGothic-Medium;
+  font-size: 1.5em;
+  padding: 1em 0;
+  color: var(--dark-purple);
+  box-shadow: inset 0 0 1em var(--light-purple);
+  font-weight: bold;
+}
+#main > ul > li a::before {
+  content: "v.";
+  display: inline-block;
+  font-size: 75%;
+  vertical-align: baseline;
+  line-height: 1.2;
+  color: var(--light-purple);
+}
+#main > ul > li a.latest {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  margin-right: 0;
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: var(--purple);
+  padding-top: 0;
+}
+#main > ul > li a.latest::after {
+  content: "Latest Version";
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark-purple);
+  font-size: 1.5rem;
+  order: -1;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+#main > ul > li a.latest::before {
+  line-height: 1.6;
+  margin-right: 0.1em;
+}
+#main > ul > li a:hover {
+  box-shadow: inset 0 0 1em var(--goldenrod);
+  color: var(--dark-goldenrod);
+}
+#main > ul > li a:hover::before, #main > ul > li a:hover::after {
+  color: var(--goldenrod);
+}
+#main > ul > li ul {
+  display: block;
+  width: calc(50% - 1rem);
+}
+#main > ul > li ul > li {
+  display: block;
+  width: 100%;
+}
+#main > ul > li ul::before {
+  content: "Legacy Versions";
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  color: var(--dark-gray);
+  top: -1.5em;
+}
+
+[data-page$="umfa.md"] #main > h1:first-child::before,
+[data-page*="/umfa/"] #main > h1:first-child::before {
+  background-image: var(--product-umfa);
+}
+
+[data-page$="fido.md"] #main > h1:first-child::before,
+[data-page*="/fido/"] #main > h1:first-child::before {
+  background-image: var(--product-fido);
+}
+
+[data-page$="android.md"] #main > h1:first-child::after,
+[data-page^="android/"] #main > h1:first-child::after {
+  background-image: var(--platform-android);
+}
+
+[data-page$="ios.md"] #main > h1:first-child::after,
+[data-page^="ios/"] #main > h1:first-child::after {
+  background-image: var(--platform-ios);
+}
+
+[data-page$="browser.md"] #main > h1:first-child::after,
+[data-page^="browser/"] #main > h1:first-child::after {
+  background-image: var(--platform-browser);
+}
+
+[data-page$="react-native.md"] #main > h1:first-child::after,
+[data-page^="react-native/"] #main > h1:first-child::after {
+  background-image: var(--platform-reactnative);
+}
+
+[data-page$="flutter.md"] #main > h1:first-child::after,
+[data-page^="flutter/"] #main > h1:first-child::after {
+  background-image: var(--platform-flutter);
+}
+
+[data-page*="/umfa/"] .sidebar-nav .app-sub-sidebar, [data-page*="/fido/"] .sidebar-nav .app-sub-sidebar, [data-page$="umfa.md"] .sidebar-nav .app-sub-sidebar, [data-page$="fido.md"] .sidebar-nav .app-sub-sidebar,
+[data-page^="android/"] .sidebar-nav .app-sub-sidebar, [data-page^="ios/"] .sidebar-nav .app-sub-sidebar, [data-page^="browser/"] .sidebar-nav .app-sub-sidebar, [data-page^="react-native/"] .sidebar-nav .app-sub-sidebar, [data-page^="flutter/"] .sidebar-nav .app-sub-sidebar, [data-page$="android.md"] .sidebar-nav .app-sub-sidebar, [data-page$="ios.md"] .sidebar-nav .app-sub-sidebar, [data-page$="browser.md"] .sidebar-nav .app-sub-sidebar, [data-page$="react-native.md"] .sidebar-nav .app-sub-sidebar, [data-page$="flutter.md"] .sidebar-nav .app-sub-sidebar {
+  display: none;
+}
+
+[data-page*="/umfa/"] #main > h1, [data-page*="/fido/"] #main > h1, [data-page$="umfa.md"] #main > h1, [data-page$="fido.md"] #main > h1,
+[data-page^="android/"] #main > h1, [data-page^="ios/"] #main > h1, [data-page^="browser/"] #main > h1, [data-page^="react-native/"] #main > h1, [data-page^="flutter/"] #main > h1, [data-page$="android.md"] #main > h1, [data-page$="ios.md"] #main > h1, [data-page$="browser.md"] #main > h1, [data-page$="react-native.md"] #main > h1, [data-page$="flutter.md"] #main > h1 {
+  font-size: 0;
+}
+
+[data-page*="/umfa/"] #main > h1::before, [data-page*="/fido/"] #main > h1::before, [data-page$="umfa.md"] #main > h1::before, [data-page$="fido.md"] #main > h1::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+body:not(:is([data-page*="/umfa/"], [data-page*="/fido/"], [data-page$="umfa.md"], [data-page$="fido.md"])) #main > h1::before {
+  display: none;
+}
+
+[data-page^="android/"] #main > h1::after, [data-page^="ios/"] #main > h1::after, [data-page^="browser/"] #main > h1::after, [data-page^="react-native/"] #main > h1::after, [data-page^="flutter/"] #main > h1::after, [data-page$="android.md"] #main > h1::after, [data-page$="ios.md"] #main > h1::after, [data-page$="browser.md"] #main > h1::after, [data-page$="react-native.md"] #main > h1::after, [data-page$="flutter.md"] #main > h1::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+body:not(:is([data-page^="android/"], [data-page^="ios/"], [data-page^="browser/"], [data-page^="react-native/"], [data-page^="flutter/"], [data-page$="android.md"], [data-page$="ios.md"], [data-page$="browser.md"], [data-page$="react-native.md"], [data-page$="flutter.md"])) #main > h1::after {
+  display: none;
+}
+
+.sidebar-nav {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.sidebar-nav > ul > li + li {
+  margin-top: 1em;
+}
+.sidebar-nav .active {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page*="/umfa/"] .sidebar-nav a[href$="/umfa"], [data-page$="umfa.md"] .sidebar-nav a[href$="/umfa"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page*="/fido/"] .sidebar-nav a[href$="/fido"], [data-page$="fido.md"] .sidebar-nav a[href$="/fido"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page^="flutter/"] .sidebar-nav a[href$="/flutter"], [data-page$="flutter.md"] .sidebar-nav a[href$="/flutter"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page^="android/"] .sidebar-nav a[href$="/android"], [data-page$="android.md"] .sidebar-nav a[href$="/android"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page^="ios/"] .sidebar-nav a[href$="/ios"], [data-page$="ios.md"] .sidebar-nav a[href$="/ios"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page^="browser/"] .sidebar-nav a[href$="/browser"], [data-page$="browser.md"] .sidebar-nav a[href$="/browser"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
+
+[data-page^="react-native/"] .sidebar-nav a[href$="/react-native"], [data-page$="react-native.md"] .sidebar-nav a[href$="/react-native"] {
+  font-weight: bold;
+  color: var(--dark-goldenrod);
+}
